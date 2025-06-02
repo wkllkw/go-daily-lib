@@ -12,6 +12,7 @@ type Person struct {
 
 type ByAge []Person
 
+// sort.Interface 需要实现以下三个方法：
 func (a ByAge) Len() int           { return len(a) }
 func (a ByAge) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
 func (a ByAge) Less(i, j int) bool { return a[i].Age < a[j].Age }
